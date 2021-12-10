@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Clock</title>
+        <link href="https://fonts.googleapis.com/css?family=Open%20Sans&display=swap&fbclid=IwAR3rbGNFCZxFz27KtuJG8E_yLh3s-4elJiy2Kd8MgJ-yEFOdbJLqzmtXuNU" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="clock_">
+            <h2>Time now is:</h2>
+            <div id="time_">
+                <div>
+                    <span id="hours">00</span><span>Hours</span>
+                </div>
+                <div>
+                    <span id="minutes">00</span><span>Minutes</span>
+                </div>
+                <div>
+                    <span id="seconds">00</span><span>Seconds</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function Clock_() {
+        var hours = document.getElementById("hours");
+        var minutes = document.getElementById("minutes");   
+        var seconds = document.getElementById("seconds");
+        var Hours_now = new Date().getHours();
+        var Minutes_now = new Date().getMinutes();
+        var Seconds_now = new Date().getSeconds();
+        hours.innerHTML = Hours_now;
+        minutes.innerHTML = Minutes_now;
+        seconds.innerHTML = Seconds_now;
+    }
+    var Count_down = setInterval(Clock_, 1000);
+</script>
